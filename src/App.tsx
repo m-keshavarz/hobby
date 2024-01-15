@@ -1,11 +1,18 @@
-import { Box, Button, Text } from "@chakra-ui/react";
+import { Box, Center, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <Box>
-      <Text>Hey guys</Text>
-      <Text>Hey Guys it's really me</Text>
-      <Button>This is just a Button</Button>
+      <Center flexDirection='column'>
+        <Box>
+          <Text fontSize="xx-large">Welcome Home</Text>
+        </Box>
+        <br />
+        <Text fontSize="larger" color="blue.500">
+          <Link to="/newbie">Newbie Challenges</Link>
+        </Text>
+      </Center>
     </Box>
   );
 }
