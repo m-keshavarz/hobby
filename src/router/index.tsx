@@ -1,8 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import NotFound from "../app/notFound";
-import Newbie from "../app/newbie";
-import BlogPreviewCard from "../app/newbie/blogPreviewCard";
+import Portfolio1 from "../app/portfolio1";
 
 export const router = createBrowserRouter([
   {
@@ -10,12 +9,8 @@ export const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/newbie",
-    element: <Newbie />,
-  },
-  {
-    path: "/newbie/blog-preview-card",
-    element: <BlogPreviewCard />,
+    path: '/portfolio1',
+    element: <Portfolio1 />
   },
   {
     path: "*",
