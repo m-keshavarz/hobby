@@ -2,7 +2,7 @@ import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 
 const Hero = () => {
   return (
-    <Flex justifyContent="space-between" mt="12.5rem">
+    <Flex justifyContent="space-between" mt="12.5rem" pl='9.25rem'>
       <Box w="47%">
         <Box fontSize="2.75rem" fontWeight="700">
           <Text>Hi, I am John,</Text>
