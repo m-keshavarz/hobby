@@ -46,7 +46,7 @@ const usePagination = ({
     );
   };
 
-  return { lastPage, buttonMaker };
+  return { lastPage, buttonMaker, Dots };
 };
 
 export default usePagination;
