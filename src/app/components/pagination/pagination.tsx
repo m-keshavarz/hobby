@@ -15,99 +15,8 @@ const Pagination = (props: PaginationProps) => {
   const { lastPage } = usePagination(props);
 
   return (
-    <Flex>
-      <Flex
-        alignItems="center"
-        alignSelf="center"
-        mt="8"
-        mx="auto"
-        gap="2"
-        sx={{
-          button: {
-            w: "10",
-          },
-        }}
-      >
-        {true ? (
-          <>
-            <Button
-              isDisabled={false}
-              bg="white"
-              variant="outline"
-              colorScheme="gray"
-              color="neutral.600"
-              onClick={() => setPage(1)}
-            >
-              First
-            </Button>
-            <Button
-              isDisabled={false}
-              bg="white"
-              variant="outline"
-              colorScheme="gray"
-              color="neutral.600"
-              onClick={() => setPage((p: number) => p - 1)}
-            >
-              Prev
-            </Button>
-          </>
-        ) : null}
-        {[...Array(Math.ceil(totalRecords / pageSize)).keys()].map((item) => (
-          <Button
-            key={item}
-            variant="outline"
-            colorScheme="gray"
-            color="neutral.600"
-            bg={item === page ? "neutral.40" : "white"}
-            onClick={() => setPage(item)}
-          >
-            {item}
-          </Button>
-        ))}
-        {true ? (
-          <>
-            <Button
-              isDisabled={false}
-              bg="white"
-              variant="outline"
-              colorScheme="gray"
-              color="neutral.600"
-              onClick={() => setPage((p: number) => p + 1)}
-            >
-              Next
-            </Button>
-            <Button
-              isDisabled={false}
-              bg="white"
-              variant="outline"
-              colorScheme="gray"
-              color="neutral.600"
-              onClick={() => setPage(lastPage)}
-            >
-              Last
-            </Button>
-          </>
-        ) : null}
-      </Flex>
-    </Flex>
-  );
-};
-
-export default Pagination;
-
-
-
-
-
-{/* <Flex gap="0.5rem" justifyContent="center">
-      <Flex
-        gap="0.5rem"
-        alignItems="center"
-        alignSelf="center"
-        textAlign="center"
-        overflow="scroll"
-        w="20%"
-      >
+    <Flex gap="0.5rem" justifyContent="center">
+      <Flex gap="0.5rem">
         <Button onClick={() => setPage(page - 1)} isDisabled={page === 1}>
           Prev
         </Button>
@@ -132,4 +41,8 @@ export default Pagination;
           Next
         </Button>
       </Flex>
-    </Flex> */}
+    </Flex>
+  );
+};
+
+export default Pagination;
