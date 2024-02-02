@@ -2,7 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import NotFound from "../app/notFound";
 import Portfolio1 from "../app/portfolio1";
-import Pagination from "../app/components/pagination";
+import Blogs from "../app/portfolio1/blog";
+// import Pagination from "../app/components/pagination";
 
 export const router = createBrowserRouter([
   {
@@ -10,15 +11,19 @@ export const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: '/portfolio1',
-    element: <Portfolio1 />
+    path: "/portfolio1",
+    element: <Portfolio1 />,
   },
   {
     path: "*",
     element: <NotFound />,
   },
+  // {
+  //   path: '/pagination',
+  //   element: <Pagination />
+  // },
   {
-    path: '/pagination',
-    element: <Pagination />
-  }
+    path: "/blogs",
+    element: <Blogs />,
+  },
 ]);

@@ -6,8 +6,7 @@ import { useState } from "react";
 
 const Portfolio1 = () => {
   const [page, setPage] = useState<number>(1);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [pageSize, setPageSize] = useState<number>(10);
+  const [pageSize] = useState<number>(10);
 
   return (
     <Box>
