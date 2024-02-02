@@ -7,12 +7,13 @@ export type PaginationProps = {
   setPage: React.Dispatch<React.SetStateAction<number>>;
   totalRecords: number;
   pageSize: number;
+  siblingCount: number
 };
 
 const Pagination = (props: PaginationProps) => {
-  const { page, setPage, totalRecords, pageSize } = props;
+  const { page, setPage } = props;
 
-  const { lastPage } = usePagination(props);
+  const { lastPage, buttonMaker } = usePagination(props);
 
   return (
     <Flex gap="0.5rem" justifyContent="center">
@@ -21,19 +22,8 @@ const Pagination = (props: PaginationProps) => {
           Prev
         </Button>
 
-        {[...Array(Math.ceil(totalRecords / pageSize)).keys()].map((item) => {
-          return (
-            <Button
-              size={{ base: "sm", lg: "md" }}
-              key={item}
-              onClick={() => setPage(item + 1)}
-              bg={item + 1 === page ? "blue.500" : "blackAlpha.100"}
-              color={item + 1 === page ? "white" : "black"}
-            >
-              {item + 1}
-            </Button>
-          );
-        })}
+        {buttonMaker()}
+        
         <Button
           onClick={() => setPage(page + 1)}
           isDisabled={page === lastPage}

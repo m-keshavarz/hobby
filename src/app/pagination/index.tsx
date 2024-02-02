@@ -48,6 +48,7 @@ const PaginationPage = () => {
         setPage={setPage}
         totalRecords={200}
         pageSize={10}
+        siblingCount={1}
       />
     </Box>
   );
