@@ -49,6 +49,8 @@ const PaginationPage = () => {
         totalRecords={200}
         pageSize={10}
         siblingCount={1}
+        startingCount={2}
+        endingCount={2}
       />
     </Box>
   );

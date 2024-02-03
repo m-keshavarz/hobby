@@ -7,7 +7,9 @@ export type PaginationProps = {
   setPage: React.Dispatch<React.SetStateAction<number>>;
   totalRecords: number;
   pageSize: number;
-  siblingCount: number
+  siblingCount: number;
+  startingCount: number
+  endingCount: number
 };
 
 const Pagination = (props: PaginationProps) => {
@@ -23,7 +25,7 @@ const Pagination = (props: PaginationProps) => {
         </Button>
 
         {buttonMaker()}
-        
+
         <Button
           onClick={() => setPage(page + 1)}
           isDisabled={page === lastPage}

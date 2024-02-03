@@ -8,13 +8,15 @@ const usePagination = ({
   page,
   setPage,
   siblingCount,
+  startingCount,
+  endingCount,
 }: PaginationProps) => {
   const lastPage = useMemo(() => {
     return Math.ceil(totalRecords / pageSize);
   }, [pageSize, totalRecords]);
 
   const Dots = () => {
-    return <Text>...</Text>;
+    return <Text fontSize="xx-large">...</Text>;
   };
 
   const AllButtons = () => {
@@ -40,7 +42,9 @@ const usePagination = ({
     return (
       <>
         <Button onClick={() => setPage(1)}>1</Button>
+        {page > startingCount && <Dots />}
         <AllButtons />
+        {page < lastPage - endingCount && <Dots />}
         <Button onClick={() => setPage(lastPage)}>{lastPage}</Button>
       </>
     );
