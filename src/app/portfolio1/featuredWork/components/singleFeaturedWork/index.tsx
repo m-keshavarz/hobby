@@ -12,7 +12,12 @@ const SingleFeaturedWork = (props: SingleFeaturedWorkProps) => {
   const { imgSrc, title, year, tag, description } = props;
 
   return (
-    <Flex gap="1.125rem">
+    <Flex
+      gap="1.125rem"
+      pb="2rem"
+      borderBottom="1px solid"
+      borderColor="#e0e0e0"
+    >
       <Image src={imgSrc} alt="featured work" objectFit="fill" />
 
       <Flex direction="column" gap="1rem">
