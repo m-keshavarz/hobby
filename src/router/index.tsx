@@ -4,6 +4,7 @@ import NotFound from "../app/notFound";
 import Portfolio1 from "../app/portfolio1";
 import Blogs from "../app/portfolio1/blog";
 import PaginationPage from "../app/pagination";
+import Carousel from "../app/components/carousel";
 
 export const router = createBrowserRouter([
   {
@@ -14,16 +15,21 @@ export const router = createBrowserRouter([
     path: "/portfolio1",
     element: <Portfolio1 />,
   },
+
   {
-    path: "*",
-    element: <NotFound />,
-  },
-  {
-    path: '/pagination',
-    element: <PaginationPage />
+    path: "/pagination",
+    element: <PaginationPage />,
   },
   {
     path: "/blogs",
     element: <Blogs />,
+  },
+  {
+    path: "/carousel",
+    element: <Carousel />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
