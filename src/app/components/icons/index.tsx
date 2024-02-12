@@ -59,3 +59,30 @@ export const TwitterIcon = (props: IconProps) => {
     </Icon>
   );
 };
+
+export const HamburgerIcon = (props: IconProps) => {
+  return (
+    <Icon viewBox="0 0 30 20" {...props}>
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0 1H30"
+          fill="currentColor"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M0 10H30"
+          fill="currentColor"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M0 19H30"
+          fill="currentColor"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+      </svg>
+    </Icon>
+  );
+};
