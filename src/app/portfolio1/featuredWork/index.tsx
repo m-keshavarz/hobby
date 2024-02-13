@@ -4,11 +4,19 @@ import fakeData from "./components/fakeDate";
 
 const FeaturedWork = () => {
   return (
-    <Box px="9.25rem" pt="1rem">
-      <Text fontSize="1.375rem" color="#21243d">
+    <Box px={{ base: "1.125rem", md: "9.25rem" }} pt="1rem">
+      <Text
+        fontSize={{ base: "1.125rem", md: "1.375rem" }}
+        textAlign={{ base: "center", md: "inherit" }}
+        color="#21243d"
+      >
         Featured works
       </Text>
-      <Flex direction="column" gap="2.875rem" mt="1.375rem">
+      <Flex
+        direction="column"
+        gap={{ base: "1.5rem", md: "2.875rem" }}
+        mt="1.375rem"
+      >
         {fakeData.map((item, index) => {
           return (
             <SingleFeaturedWork

@@ -39,7 +39,6 @@ const Hero = () => {
         margin={{base: 'auto', md: '0 9.4rem 0 0'}}
         boxSize="fit-content"
         rounded="full"
-        // mr={{ base: "0", md: "9.4rem" }}
         boxShadow="-8px 17px 5px #EDF7FA"
       >
         <Image src="/public/portrait.png" alt="portraint of John" />

@@ -6,21 +6,33 @@ const RecentPosts = () => {
   return (
     <Flex
       direction="column"
-      gap="1rem"
-      py="7"
-      px="9.25rem"
+      gap={{ base: "1rem", md: "1rem" }}
+      py={{ base: "1rem", md: "7" }}
+      px={{ base: "0.75rem", md: "9.25rem" }}
       background="#EDF7FA"
-      mt="5rem"
+      mt={{ base: "3.625rem", md: "5rem" }}
     >
-      <Box mt="4.5rem" w="full">
-        <Flex justifyContent="space-between">
-          <Text fontSize="1.4rem">Recent Posts</Text>
-          <Link color="#00A8CC" href="#" fontSize="1rem">
+      <Box mt={{ base: "0", md: "4.5rem" }} w="full">
+        <Flex justifyContent={{ base: "center", md: "space-between" }}>
+          <Text fontSize={{ base: "1.125rem", md: "1.4rem" }}>
+            Recent Posts
+          </Text>
+          <Link
+            color="#00A8CC"
+            href="#"
+            fontSize="1rem"
+            display={{ base: "none", md: "inline" }}
+          >
             View All
           </Link>
         </Flex>
       </Box>
-      <Flex gap="1rem" justifyContent="space-between">
+      <Flex
+        gap="1rem"
+        py={{ base: "2rem", md: "0" }}
+        flexDirection={{ base: "column", md: "row" }}
+        justifyContent={{ base: "normal", md: "space-between" }}
+      >
         {data.recentPosts.map((post, index) => {
           return (
             <SinglePost

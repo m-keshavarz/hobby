@@ -17,16 +17,17 @@ const SingleFeaturedWork = (props: SingleFeaturedWorkProps) => {
       pb="2rem"
       borderBottom="1px solid"
       borderColor="#e0e0e0"
+      flexDirection={{ base: "column", md: "row" }}
     >
       <Image src={imgSrc} alt="featured work" objectFit="fill" />
 
       <Flex direction="column" gap="1rem">
-        <Text fontSize="1.875rem" fontWeight="bold">
+        <Text fontSize={{ base: "1.5rem", md: "1.875rem" }} fontWeight="bold">
           {title}
         </Text>
         <Flex gap="1.5rem" alignItems="center">
           <Badge
-            fontSize="1.125rem"
+            fontSize={{ base: "1rem", md: "1.125rem" }}
             color="white"
             fontWeight="black"
             rounded="1rem"
@@ -35,7 +36,7 @@ const SingleFeaturedWork = (props: SingleFeaturedWorkProps) => {
           >
             {year}
           </Badge>
-          <Text fontSize="1.25rem" color="#8695a4">
+          <Text fontSize={{ base: "1rem", md: "1.25rem" }} color="#8695a4">
             {tag}
           </Text>
         </Flex>
