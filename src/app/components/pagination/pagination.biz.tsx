@@ -2,15 +2,16 @@ import { useMemo } from "react";
 import { PaginationProps } from "./pagination";
 import { Button, Text } from "@chakra-ui/react";
 
-const usePagination = ({
-  pageSize,
-  totalRecords,
-  page,
-  setPage,
-  siblingCount,
-  startingCount,
-  endingCount,
-}: PaginationProps) => {
+const usePagination = (props: PaginationProps) => {
+  const {
+    pageSize,
+    totalRecords,
+    page,
+    setPage,
+    siblingCount,
+    startingCount,
+    endingCount,
+  } = props;
   const lastPage = useMemo(() => {
     return Math.ceil(totalRecords / pageSize);
   }, [pageSize, totalRecords]);
@@ -49,6 +50,8 @@ const usePagination = ({
       </>
     );
   };
+
+  const showButtons = () => {};
 
   return { lastPage, buttonMaker, Dots };
 };

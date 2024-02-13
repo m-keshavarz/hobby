@@ -1,4 +1,3 @@
-/* eslint-disable no-constant-condition */
 import { Button, Flex } from "@chakra-ui/react";
 import usePagination from "./pagination.biz";
 
@@ -8,8 +7,8 @@ export type PaginationProps = {
   totalRecords: number;
   pageSize: number;
   siblingCount: number;
-  startingCount: number
-  endingCount: number
+  startingCount: number;
+  endingCount: number;
 };
 
 const Pagination = (props: PaginationProps) => {
