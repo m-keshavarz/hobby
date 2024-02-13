@@ -5,9 +5,9 @@ import {
   DrawerCloseButton,
   DrawerContent,
   DrawerOverlay,
-  Link,
   useDisclosure,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { HamburgerIcon } from "../../components/icons";
 
 const Header = () => {
@@ -40,9 +40,15 @@ const Header = () => {
               gap="7"
               mt="5rem"
             >
-              <Link href="#">Works</Link>
-              <Link href="#">Blog</Link>
-              <Link href="#">Contact</Link>
+              <Link to="/" onClick={onClose}>
+                Works
+              </Link>
+              <Link to="/blogs" onClick={onClose}>
+                Blog
+              </Link>
+              <Link to="/" onClick={onClose}>
+                Contact
+              </Link>
             </Box>
           </DrawerBody>
         </DrawerContent>
@@ -55,9 +61,15 @@ const Header = () => {
         gap="7"
         pr="3.75rem"
       >
-        <Link href="#">Works</Link>
-        <Link href="#">Blog</Link>
-        <Link href="#">Contact</Link>
+        <Link to="/" onClick={onClose}>
+          Works
+        </Link>
+        <Link to="/blogs" onClick={onClose}>
+          Blog
+        </Link>
+        <Link to="/" onClick={onClose}>
+          Contact
+        </Link>
       </Box>
     </Box>
   );

@@ -68,19 +68,19 @@ export const HamburgerIcon = (props: IconProps) => {
           d="M0 1H30"
           fill="currentColor"
           stroke="currentColor"
-          stroke-width="1.6"
+          strokeWidth="1.6"
         />
         <path
           d="M0 10H30"
           fill="currentColor"
           stroke="currentColor"
-          stroke-width="1.6"
+          strokeWidth="1.6"
         />
         <path
           d="M0 19H30"
           fill="currentColor"
           stroke="currentColor"
-          stroke-width="1.6"
+          strokeWidth="1.6"
         />
       </svg>
     </Icon>
